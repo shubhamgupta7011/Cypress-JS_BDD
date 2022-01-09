@@ -1,0 +1,68 @@
+{
+  "name": "cypress-automation",
+  "version": "1.0.0",
+  "description": "Automation for test with",
+  "main": "index.js",
+  "scripts": {
+    "build": "run-s clean:build build:run",
+    "build:run": "npx tsc",
+    "build:watch": "npx tsc -w",
+    "clean": "run-p clean:*",
+    "clean:build": "rm -rf dist",
+    "clean:reports": "rm -rf reports/cucumber-json/** reports/html/**",
+    "clean:screenshots": "rm -rf reports/screenshots/**",
+    "clean:videos": "rm -rf reports/videos/**",
+    "lint": "run-s lint:*",
+    "lint:eslint": "npx eslint src/** --ext .ts,.js",
+    "lint:gherkin": "npx gherkin-lint features/**",
+    "test": "npx cypress-tags run",
+    "report": "run-s report:generate report:merge",
+    "report:generate": "node utils/reporter/generate.js",
+    "report:merge": "node utils/reporter/merge-cucumber-json.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "cucumber",
+    "bdd"
+  ],
+  "author": "Defrost",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/cypress-cucumber-preprocessor": "^4.0.1",
+    "@types/node": "^16.10.3",
+    "@types/yargs": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-import": "^2.25.4",
+    "gherkin-lint": "^4.2.2",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.1",
+    "cypress": "^8.5.0",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^1.6.2",
+    "exceljs": "^4.3.0",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "resolve": "^1.20.0",
+    "uuid": "^8.3.2",
+    "xlsx": "^0.17.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "src/tests/step_definitions/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}

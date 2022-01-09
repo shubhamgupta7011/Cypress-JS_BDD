@@ -1,0 +1,5 @@
+# Declare files that will always have LF line endings on checkout.
+*.ts text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.feature text eol=lf

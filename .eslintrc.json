@@ -1,0 +1,46 @@
+{
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "airbnb-base",
+      "plugin:cypress/recommended"
+    ],
+    "parser": "esprima",
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "cypress"
+    ],
+    "rules": {
+      "cypress/no-assigning-return-values": "error",
+      "cypress/no-unnecessary-waiting": "error",
+      "cypress/assertion-before-screenshot": "warn",
+      "cypress/no-force": "warn",
+      "cypress/no-async-tests": "error",
+      "cypress/no-pause": "error",
+      
+      "function-paren-newline": "off",
+      "arrow-body-style": ["error", "always"],
+      "import/extensions": ["off", { "js": "never" }], 
+      "max-len": ["error", { 
+        "code": 100,
+        "comments": 120,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+        }
+      ]
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".js"],
+          "moduleDirectory": ["node_modules", "src/"]
+        }
+      }
+    }
+  }

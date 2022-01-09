@@ -1,0 +1,99 @@
+{
+  "no-unnamed-features": "on",
+  "no-dupe-feature-names": "on",
+  "no-duplicate-tags": "on",
+  "no-empty-background": "on",
+  "no-empty-file": "on",
+  "no-examples-in-scenarios": "on",
+  "no-files-without-scenarios": "on",
+  "no-multiple-empty-lines": "on",
+  "no-scenario-outlines-without-examples": "on",
+  "no-trailing-spaces": "on",
+  "no-unused-variables": "on",
+  "one-space-between-tags": "on",
+  "use-and": "on",
+  "keywords-in-logical-order": "on",
+  "allowed-tags": [
+    "on",
+    {
+      "tags": [
+        "@sanity",
+        "@platinum",
+        "@gold",
+        "@download",
+        "@upload",
+        "@excel"
+      ],
+      "patterns": [
+        "^@ABC-[0-9]{1,3}$"
+      ]
+    }
+  ],
+  "indentation": [
+    "on",
+    {
+      "Feature": 0,
+      "Background": 2,
+      "Scenario": 2,
+      "Step": 4,
+      "Examples": 4,
+      "example": 6,
+      "given": 4,
+      "when": 4,
+      "then": 4,
+      "and": 4,
+      "but": 4,
+      "feature tag": 0,
+      "scenario tag": 2
+    }
+  ],
+  "file-name": [
+    "on",
+    {
+      "style": "kebab-case"
+    }
+  ],
+  "max-scenarios-per-file": [
+    "on",
+    {
+      "maxScenarios": 10
+    }
+  ],
+  "name-length": [
+    "on",
+    {
+      "Feature": 70,
+      "Scenario": 100,
+      "Step": 90
+    }
+  ],
+  "new-line-at-eof": [
+    "on",
+    "yes"
+  ],
+  "no-dupe-scenario-names": [
+    "on",
+    "in-feature"
+  ],
+  "no-restricted-patterns": [
+    "on",
+    {
+      "Global": [
+        "debugging step",
+        "^I$",
+        "click",
+        "validate",
+        "verify"
+      ]
+    }
+  ],
+  "scenario-size": [
+    "on",
+    {
+      "steps-length": {
+        "Background": 0,
+        "Scenario": 30
+      }
+    }
+  ]
+}

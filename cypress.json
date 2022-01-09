@@ -1,0 +1,21 @@
+{
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "env": {
+    "loglevel": "info",
+    "testenv": "pre1",
+    "lang": "en",
+    "username": "",
+    "password": ""
+  },
+  "fixturesFolder": "reports/files/upload",
+  "chromeWebSecurity": false,
+  "downloadsFolder": "reports/files/download",
+  "pluginsFile": "src/utils/browser/cypress/plugins/index.js",
+  "supportFile": "src/utils/browser/cypress/support/index.js",
+  "screenshotsFolder": "reports/screenshots",
+  "screenshotOnRunFailure": true,
+  "testFiles": "**/*.feature",
+  "integrationFolder": "features",
+  "videosFolder": "reports/videos",
+  "video": false
+}

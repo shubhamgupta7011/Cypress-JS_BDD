@@ -1,0 +1,12 @@
+# node package
+node_modules
+package-lock.json
+
+# build folder
+dist
+
+#logs
+*.log
+reports/**/*
+# ignore reports .gitkeep
+!reports/.gitkeep
