@@ -1,30 +1,28 @@
 {
-  "name": "cypress-automation",
+  "name": "cypress-javascript-automation",
   "version": "1.0.0",
   "description": "Automation for test with",
   "main": "index.js",
   "scripts": {
-    "build": "run-s clean:build build:run",
-    "build:run": "npx tsc",
-    "build:watch": "npx tsc -w",
-    "clean": "run-p clean:*",
-    "clean:build": "rm -rf dist",
-    "clean:reports": "rm -rf reports/cucumber-json/** reports/html/**",
+    "clean:htmlReport": "rm -rf reports/cucumber-json/** reports/html/**",
     "clean:screenshots": "rm -rf reports/screenshots/**",
     "clean:videos": "rm -rf reports/videos/**",
+    "clean:report": "run-s clean:htmlReport clean:screenshots clean:videos",
     "lint": "run-s lint:*",
     "lint:eslint": "npx eslint src/** --ext .ts,.js",
     "lint:gherkin": "npx gherkin-lint features/**",
     "test": "npx cypress-tags run",
-    "report": "run-s report:generate report:merge",
     "report:generate": "node utils/reporter/generate.js",
-    "report:merge": "node utils/reporter/merge-cucumber-json.js"
+    "report:merge": "node utils/reporter/merge-cucumber-json.js",
+    "report": "run-s report:generate report:merge"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/shubhamgupta7011/Cypress-JS_BDD.git"
   },
   "keywords": [
+    "Cypress",
+    "Javascript",
     "cucumber",
     "bdd"
   ],
